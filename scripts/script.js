@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (!localStorage.getItem("storedList")) {      //if not in local, fetch and add to local
     let fakeStoreRequest = new Request('https://fakestoreapi.com/products');
-    fetch(fakeStoreRequest)
+    await fetch(fakeStoreRequest)
     .then(fsPromise => fsPromise.json())
     .then(fsResponse => localStorage.setItem("storedList", JSON.stringify(fsResponse)));
   }
