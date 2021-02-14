@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     currProduct.shadowRoot.childNodes[0].childNodes[3].setAttribute('button', grabbedArray[key]['button']);
 
 
-    currProduct.shadowRoot.childNodes[1].style = grabbedArray[key]['style'];
+    currProduct.shadowRoot.childNodes[1] = grabbedArray[key]['style'];
 
     
     productList.appendChild(currProduct);
